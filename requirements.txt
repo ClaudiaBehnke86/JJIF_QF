@@ -1,0 +1,11 @@
+numpy==1.26.4
+pandas==2.2.2
+plotly
+streamlit
+kaleido
+matplotlib
+fpdf2
+scipy
+cython
+git+https://github.com/ing-bank/sparse_dot_topn.git
+scikit-learn

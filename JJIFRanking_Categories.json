@@ -1,0 +1,998 @@
+[
+  {
+    "cat_id": "287",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "292",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -45 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "285",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "289",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "272",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "286",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "293",
+    "cat_title": "ADULTS CONTACT JU-JITSU FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "288",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE +94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "268",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "271",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "270",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "273",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "269",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "284",
+    "cat_title": "ADULTS CONTACT JU-JITSU MALE -94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "240",
+    "cat_title": "ADULTS JIU-JITSU FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "261",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -45 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "244",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "226",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "225",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "246",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "238",
+    "cat_title": "ADULTS JIU-JITSU FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "239",
+    "cat_title": "ADULTS JIU-JITSU MALE +94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "236",
+    "cat_title": "ADULTS JIU-JITSU MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "224",
+    "cat_title": "ADULTS JIU-JITSU MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "242",
+    "cat_title": "ADULTS JIU-JITSU MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "221",
+    "cat_title": "ADULTS JIU-JITSU MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "229",
+    "cat_title": "ADULTS JIU-JITSU MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "230",
+    "cat_title": "ADULTS JIU-JITSU MALE -94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "232",
+    "cat_title": "ADULTS JU-JITSU DUO MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "262",
+    "cat_title": "ADULTS JU-JITSU DUO MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "419",
+    "cat_title": "ADULTS JU-JITSU DUO OPEN",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "228",
+    "cat_title": "ADULTS JU-JITSU DUO WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "247",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "256",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -45 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "260",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "227",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "245",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "233",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "237",
+    "cat_title": "ADULTS JU-JITSU FIGHTING FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "241",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE +94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "222",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "223",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "234",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "243",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "235",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "231",
+    "cat_title": "ADULTS JU-JITSU FIGHTING MALE -94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "283",
+    "cat_title": "ADULTS JU-JITSU SHOW MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "267",
+    "cat_title": "ADULTS JU-JITSU SHOW MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "420",
+    "cat_title": "ADULTS JU-JITSU SHOW OPEN",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "290",
+    "cat_title": "ADULTS JU-JITSU SHOW WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "374",
+    "cat_title": "U16 JIU-JITSU FEMALE -36 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "375",
+    "cat_title": "U16 JIU-JITSU FEMALE -40 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "376",
+    "cat_title": "U16 JIU-JITSU FEMALE -44 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "377",
+    "cat_title": "U16 JIU-JITSU FEMALE -48 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "378",
+    "cat_title": "U16 JIU-JITSU FEMALE -52 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "379",
+    "cat_title": "U16 JIU-JITSU FEMALE -57 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "380",
+    "cat_title": "U16 JIU-JITSU FEMALE -63 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "390",
+    "cat_title": "U16 JIU-JITSU MALE +73 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "382",
+    "cat_title": "U16 JIU-JITSU MALE -38 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "383",
+    "cat_title": "U16 JIU-JITSU MALE -42 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "384",
+    "cat_title": "U16 JIU-JITSU MALE -46 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "385",
+    "cat_title": "U16 JIU-JITSU MALE -50 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "386",
+    "cat_title": "U16 JIU-JITSU MALE -55 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "387",
+    "cat_title": "U16 JIU-JITSU MALE -60 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "388",
+    "cat_title": "U16 JIU-JITSU MALE -66 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "389",
+    "cat_title": "U16 JIU-JITSU MALE -73 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "391",
+    "cat_title": "U16 JU-JITSU DUO FEMALE",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "392",
+    "cat_title": "U16 JU-JITSU DUO MALE",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "393",
+    "cat_title": "U16 JU-JITSU DUO MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "400",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE +63 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "394",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -40 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "395",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -44 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "396",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -48 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "397",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -52 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "398",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -57 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "399",
+    "cat_title": "U16 JU-JITSU FIGHTING FEMALE -63 kg",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "409",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE +73 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "401",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -38 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "402",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -42 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "403",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -46 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "404",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -50 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "405",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -55 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "406",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -60 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "407",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -66 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "408",
+    "cat_title": "U16 JU-JITSU FIGHTING MALE -73 kg",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "410",
+    "cat_title": "U16 JU-JITSU SHOW MALE",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "411",
+    "cat_title": "U16 JU-JITSU SHOW MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "353",
+    "cat_title": "U18 JIU-JITSU FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "350",
+    "cat_title": "U18 JIU-JITSU FEMALE -40 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "351",
+    "cat_title": "U18 JIU-JITSU FEMALE -44 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "327",
+    "cat_title": "U18 JIU-JITSU FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "328",
+    "cat_title": "U18 JIU-JITSU FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "329",
+    "cat_title": "U18 JIU-JITSU FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "330",
+    "cat_title": "U18 JIU-JITSU FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "352",
+    "cat_title": "U18 JIU-JITSU FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "421",
+    "cat_title": "U18 JIU-JITSU MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "422",
+    "cat_title": "U18 JIU-JITSU MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "423",
+    "cat_title": "U18 JIU-JITSU MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "424",
+    "cat_title": "U18 JIU-JITSU MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "354",
+    "cat_title": "U18 JU-JITSU DUO FEMALE",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "355",
+    "cat_title": "U18 JU-JITSU DUO MALE",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "415",
+    "cat_title": "U18 JU-JITSU DUO MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "356",
+    "cat_title": "U18 JU-JITSU DUO MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "414",
+    "cat_title": "U18 JU-JITSU DUO WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "361",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "357",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -40 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "358",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -44 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "359",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "339",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "340",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "360",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "341",
+    "cat_title": "U18 JU-JITSU FIGHTING FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "349",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE +81 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "342",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -46 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "425",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -48 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "343",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -50 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "426",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -52 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "344",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -55 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "427",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "345",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -60 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "428",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "346",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -66 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "429",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "347",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -73 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "430",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "348",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -81 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "431",
+    "cat_title": "U18 JU-JITSU FIGHTING MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "362",
+    "cat_title": "U18 JU-JITSU SHOW FEMALE",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "363",
+    "cat_title": "U18 JU-JITSU SHOW MALE",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "413",
+    "cat_title": "U18 JU-JITSU SHOW MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "364",
+    "cat_title": "U18 JU-JITSU SHOW MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "412",
+    "cat_title": "U18 JU-JITSU SHOW WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "301",
+    "cat_title": "U21 JIU-JITSU FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "319",
+    "cat_title": "U21 JIU-JITSU FEMALE -45 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "298",
+    "cat_title": "U21 JIU-JITSU FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "317",
+    "cat_title": "U21 JIU-JITSU FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "305",
+    "cat_title": "U21 JIU-JITSU FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "304",
+    "cat_title": "U21 JIU-JITSU FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "296",
+    "cat_title": "U21 JIU-JITSU FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "318",
+    "cat_title": "U21 JIU-JITSU MALE +94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "321",
+    "cat_title": "U21 JIU-JITSU MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "295",
+    "cat_title": "U21 JIU-JITSU MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "309",
+    "cat_title": "U21 JIU-JITSU MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "320",
+    "cat_title": "U21 JIU-JITSU MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "303",
+    "cat_title": "U21 JIU-JITSU MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "294",
+    "cat_title": "U21 JIU-JITSU MALE -94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "322",
+    "cat_title": "U21 JU-JITSU DUO MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "323",
+    "cat_title": "U21 JU-JITSU DUO MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "324",
+    "cat_title": "U21 JU-JITSU DUO WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "302",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE +70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "313",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -45 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "310",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -48 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "306",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -52 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "307",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -57 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "316",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -63 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "297",
+    "cat_title": "U21 JU-JITSU FIGHTING FEMALE -70 KG",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "314",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE +94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "308",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -56 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "299",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -62 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "300",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -69 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "312",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -77 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "311",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -85 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "315",
+    "cat_title": "U21 JU-JITSU FIGHTING MALE -94 KG",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "325",
+    "cat_title": "U21 JU-JITSU SHOW MEN",
+    "cat_sex": "m",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "370",
+    "cat_title": "U21 JU-JITSU SHOW MIXED",
+    "cat_sex": "x",
+    "cat_isteam": "0"
+  },
+  {
+    "cat_id": "326",
+    "cat_title": "U21 JU-JITSU SHOW WOMEN",
+    "cat_sex": "f",
+    "cat_isteam": "0"
+  }
+]
