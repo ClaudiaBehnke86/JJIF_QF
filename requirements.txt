@@ -7,5 +7,4 @@ matplotlib
 fpdf2
 scipy
 cython
-git+https://github.com/ing-bank/sparse_dot_topn.git
-scikit-learn
+pycountry_convert
