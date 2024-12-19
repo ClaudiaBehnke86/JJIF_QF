@@ -258,7 +258,7 @@ if password == st.secrets['application_pass']:
             df_standings = get_standings(st.secrets['user'], st.secrets['password'])
         st.session_state.df_standings = df_standings
 
-         # add QF type
+        # add QF type
         df_standings['QF_type'] = None
 
         # select the top 4
@@ -275,19 +275,34 @@ if password == st.secrets['application_pass']:
     # only one athlete per JJNO is allowed per category
     df_doubleathletes = df_top4[df_top4.duplicated(subset=['Category', 'country_code'], keep=False)]
 
-    # those are the double athletes, which need "deselected
+    # those are the double athletes, which needs to be "deselected"
     remove_df = df_top4[df_top4.duplicated(subset=['Category', 'country_code'], keep='first')]
 
+    # update standings
     df_standings = pd.merge(df_standings, remove_df, on=['Category', 'country_code', 'Country', 'Firstname', 'Lastname', 'Continent', 'Standing', 'Points', 'QF_type'], how='left', indicator='Double')
 
     # remove R at double nations
     df_standings.loc[df_standings['Double'] == "both", "QF_type"] = None
 
     for cat in df_standings['Category'].unique():
-        if len(df_standings[(df_standings['Category']==cat) & (df_standings['QF_type'] == "R" )]) < 4:
-            df_top4 = pd.concat([df_top4, df_standings[(df_standings['Category']==cat)&(df_standings['Standing'] == 5)]])
-            df_standings['QF_type'][(df_standings['Category']==cat)&(df_standings['Standing'] == 5)] = "R"
-            df_top4['QF_type'][(df_top4['Category']==cat)&(df_top4['Standing'] == 5)] = "R"
+        df_cut_cat = df_standings[(df_standings['Category']==cat)]
+        cur_len = len(df_cut_cat[df_cut_cat['QF_type'] == "R"])
+        index = 5 - cur_len
+        while cur_len < 4:
+            if (index + cur_len) < len(df_cut_cat):
+                # jjnos in category
+                jjnos_cat = df_cut_cat['country_code'][df_cut_cat['QF_type'] == "R"].unique().tolist()
+                # loop over next athletes
+                df_next_ath = df_cut_cat[(~df_cut_cat['country_code'].isin(jjnos_cat)) & (df_cut_cat['Standing'] == (index + cur_len))]
+                df_top4 = pd.concat([df_top4, df_next_ath])
+                #
+                df_standings['QF_type'][(~df_standings['country_code'].isin(jjnos_cat)) &(df_standings['Category']==cat)&(df_standings['Standing'] == (index + cur_len))] = "R"
+                df_top4['QF_type'][(df_top4['Category']==cat)&(df_top4['Standing'] == (index + cur_len))] = "R"
+                index = index + 1
+                cur_len = len(df_standings[(df_standings['Category']==cat) & (df_standings['QF_type'] == "R" )])
+            else:
+                st.warning(f'{cat} does not have enough athletes for ranking', icon="⚠️")
+                cur_len = 4
 
     # Clean indicators
     del df_top4['Double']
