@@ -324,7 +324,7 @@ if password == st.secrets['application_pass']:
             df_selectable = df_selectable.sort_values(by=['Standing'])
 
             output_dict = st.dataframe(
-                df_selectable,
+                df_selectable[['Standing', 'Category', 'Country', 'Lastname', 'Firstname', 'Points']],
                 use_container_width=True,
                 hide_index=True,
                 key="round"+str(number_of_options),
@@ -399,36 +399,70 @@ if password == st.secrets['application_pass']:
         )
         st.plotly_chart(x)
 
+        df_jjcu = pd.DataFrame()
+        df_jjcu['Continent'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().index
+        df_jjcu['counts'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().values
+        fig2 = px.pie(df_jjcu, values='counts', names='Continent',
+                      color='Continent',
+                      title='Continent distribution total')
+        st.plotly_chart(fig2, use_container_width=True)
+
+        left_column, right_column = st.columns(2)
+        with left_column:
+            df_jjcu_R = pd.DataFrame()
+            df_jjcu_R['Continent'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().index
+            df_jjcu_R['counts'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().values
+            fig_R = px.pie(df_jjcu_R, values='counts', names='Continent',
+                          color='Continent',
+                          title='Continent distribution Ranking')
+            st.plotly_chart(fig_R, use_container_width=True)
+
+        with right_column:
+            df_jjcu_WC = pd.DataFrame()
+            df_jjcu_WC['Continent'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().index
+            df_jjcu_WC['counts'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().values
+            fig_WC = px.pie(df_jjcu_WC, values='counts', names='Continent',
+                          color='Continent',
+                          title='Continent distribution Wild Cards')
+            st.plotly_chart(fig_WC, use_container_width=True)
+
+
     with categories:
         for cat in cat_list:
             st.header(cat)
 
             st.write("via Ranking")
-            st.write(df_standings[(df_standings['QF_type']== "R") & (df_standings['Category']==cat)])
+            st.dataframe(df_standings[(df_standings['QF_type']== "R") & (df_standings['Category']==cat)], use_container_width=True, hide_index=True, column_order=['Standing', 'Country', 'Lastname', 'Firstname', 'Points'])
 
             st.write("via Wild Card")
-            st.write(df_standings[(df_standings['QF_type']== "WC") & (df_standings['Category']==cat)])
+            st.dataframe(df_standings[(df_standings['QF_type']== "WC") & (df_standings['Category']==cat)], use_container_width=True, hide_index=True, column_order=['Standing', 'Country', 'Lastname', 'Firstname', 'Points'])
 
             st.write("next in Ranking")
-            st.write(df_standings[(df_standings['QF_type'].isnull()) & (df_standings['Standing'] < 10) & (df_standings['Category']==cat)])
+            st.dataframe(df_standings[(df_standings['QF_type'].isnull()) & (df_standings['Standing'] < 10) & (df_standings['Category']==cat)], use_container_width=True, hide_index=True, column_order=['Standing', 'Country', 'Lastname', 'Firstname', 'Points'])
 
     with countries:
+        st.write('Qualfied countries: ', len(df_standings['Country'][df_standings['QF_type'].notnull()].unique().tolist()))
+        st.write('Total countries: ', len(df_standings['Country'].unique().tolist()))
 
         for country in all_countries:
             if len(df_standings[(df_standings['QF_type'].notnull()) & (df_standings['Country']==country)]) > 0:
                 st.header(country)
                 if len(df_standings[(df_standings['QF_type'] == "R") & (df_standings['Country']==country)]) > 0:
                     st.write("Qualified via Ranking")
+                    st.dataframe(df_standings[(df_standings['QF_type'] == "R") & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
 
-                    st.write(df_standings[(df_standings['QF_type'] == "R") & (df_standings['Country']==country)])
-
-                if len(df_doubleathletes[df_doubleathletes['Country']==country]) > 0:
+                if len(df_doubleathletes[df_doubleathletes['Country'] == country]) > 0:
                     st.write("Double Athletes")
-                    st.write(df_doubleathletes[df_doubleathletes['Country']==country])
+                    st.dataframe(df_doubleathletes[df_doubleathletes['Country']==country], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
 
-                if len(df_standings[(df_standings['QF_type'] == "WC")&(df_standings['Country']==country)]) > 0:
-                    st.write("WC Athletes")
-                    st.write(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)])
+                if len(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)]) > 0:
+                    st.write("Wild Card Athletes")
+                    st.dataframe(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
+
+                if len(df_standings[(df_standings['Standing'] < 10) & (df_standings['Country']==country)]) > 0:
+                    st.write("List of replacements")
+                    st.dataframe(df_standings[(df_standings['QF_type'].isnull()) &(df_standings['Standing'] < 10) & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
+
 
 else:
     st.image(
