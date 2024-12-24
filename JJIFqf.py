@@ -114,6 +114,7 @@ def get_standings(user, password):
     d_in = response.json()
     df_out = json_normalize(d_in)
 
+
     # remove prefix (this is hard coded per event! )
     df_out['title'].replace("World Games 2025 Standing - ", " ", regex=True, inplace=True)
     cat_names = df_out["title"].to_list()
@@ -178,7 +179,7 @@ def get_standings(user, password):
 def write_session_state():
 
     st.session_state["df_standings"] = df_standings
-
+    st.session_state['dropcats'] = dropcats
 
 @st.cache_data
 def convert_df(df):
@@ -317,14 +318,19 @@ if password == st.secrets['application_pass']:
     # create tabs
     select, categories, countries, graphics = st.tabs(["Select athletes", "Categories", "Countries", "Show Graphics"])
 
+    if 'dropcats' not in st.session_state:
+        dropcats = []
+        st.session_state["dropcats"] = dropcats
+    else:
+        # get session state
+        dropcats = st.session_state["dropcats"]
+
     with select:
         st.header("Select Wild Cards")
 
         # drop categories which have 6 athletes selected
         number_of_options = 102 - len(df_standings[df_standings['QF_type'].notnull()])
         if number_of_options > 0:
-
-            dropcats = []
 
             st.session_state.df_standings = df_standings
 
@@ -333,8 +339,10 @@ if password == st.secrets['application_pass']:
             # countries without athletes in the top 4 but athletes QF
             wc_countries = [x for x in all_countries if x not in selected_countries]
 
+            # make a list of all categories countries
+
             # select those which can be selectable
-            df_selectable = df_standings[df_standings['Country'].isin(wc_countries)]
+            df_selectable = df_standings[df_standings['Country'].isin(wc_countries) & (~df_standings['Category'].isin(dropcats))]
             # sort
             df_selectable = df_selectable.sort_values(by=['Standing'])
 
@@ -354,9 +362,10 @@ if password == st.secrets['application_pass']:
             del df_standings['Double']
 
             for cat in cat_list:
-                if len(df_standings[(df_standings['QF_type'].notnull()) & (df_standings['Category']==cat)]) >= 6:
-                    st.warning(f'{cat} is full', icon="⚠️")
-                    dropcats.append(cat)
+                if cat not in dropcats:
+                    if len(df_standings[(df_standings['QF_type'].notnull()) & (df_standings['Category']==cat)]) >= 6:
+                        st.warning(f'{cat} is full', icon="⚠️")
+                        dropcats.append(cat)
 
             if st.button("Submit", on_click=write_session_state):
 
@@ -369,7 +378,7 @@ if password == st.secrets['application_pass']:
                     file_name="selection.csv",
                     mime="text/csv",
                 )
-
+            st.write("Full categories ", str(dropcats))
     with graphics:
         #some pics
 
@@ -462,22 +471,21 @@ if password == st.secrets['application_pass']:
         for country in all_countries:
             if len(df_standings[(df_standings['QF_type'].notnull()) & (df_standings['Country']==country)]) > 0:
                 st.header(country)
-                if len(df_standings[(df_standings['QF_type'] == "R") & (df_standings['Country']==country)]) > 0:
+                if len(df_top4[df_top4['Country'] == country]) > 0:
                     st.write("Qualified via Ranking")
-                    st.dataframe(df_standings[(df_standings['QF_type'] == "R") & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
+                    st.dataframe(df_top4[df_top4['Country']==country], use_container_width=True, hide_index=True, column_order=['Lastname', 'Firstname', 'Category','Standing'])
 
                 if len(df_doubleathletes[df_doubleathletes['Country'] == country]) > 0:
                     st.write("Double Athletes")
-                    st.dataframe(df_doubleathletes[df_doubleathletes['Country']==country], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
+                    st.dataframe(df_doubleathletes[df_doubleathletes['Country']==country], use_container_width=True, hide_index=True, column_order=['Lastname', 'Firstname', 'Category','Standing'])
 
                 if len(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)]) > 0:
                     st.write("Wild Card Athletes")
-                    st.dataframe(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
+                    st.dataframe(df_standings[(df_standings['QF_type'] == "WC") & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Lastname', 'Firstname', 'Category','Standing'])
 
-                if len(df_standings[(df_standings['Standing'] < 10) & (df_standings['Country']==country)]) > 0:
+                if len(df_standings[(df_standings['Standing'] < 8) & (df_standings['Country']==country)]) > 0:
                     st.write("List of replacements")
-                    st.dataframe(df_standings[(df_standings['QF_type'].isnull()) &(df_standings['Standing'] < 10) & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Standing', 'Category', 'Lastname', 'Firstname', 'Points'])
-
+                    st.dataframe(df_standings[(df_standings['QF_type'].isnull()) &(df_standings['Standing'] < 10) & (df_standings['Standing'] > 4) & (df_standings['Country']==country)], use_container_width=True, hide_index=True, column_order=['Lastname', 'Firstname', 'Category','Standing'])
 
 else:
     st.image(
