@@ -138,7 +138,7 @@ def get_standings(user, password):
         # flatten multilevel index
         df.columns = df.columns.get_level_values(0)
         # remove "TOP" entries
-        df = df[~df['Lastname'].str.contains("TOP", na=False)]
+        df = df[~df['Country'].str.contains("TOP", na=False)]
 
         df['Standing'] = df['Standing'].astype(int)
         df['Category'] = cat_names[i]
@@ -271,6 +271,7 @@ if password == st.secrets['application_pass']:
     else:
         # get session state of df standing
         df_standings = st.session_state["df_standings"]
+
 
     df_top4 = df_standings[df_standings['Standing'] < 5]
     # only one athlete per JJNO is allowed per category
