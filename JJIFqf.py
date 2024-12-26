@@ -237,7 +237,7 @@ def draw_as_table(df_in):
 # main program starts here
 
 st.sidebar.image("https://i0.wp.com/jjeu.eu/wp-content/uploads/2018/08/jjif-logo-170.png?fit=222%2C160&ssl=1",
-                 use_column_width='always')
+                 use_container_width=True)
 
 password = st.sidebar.text_input("Enter the password")
 
