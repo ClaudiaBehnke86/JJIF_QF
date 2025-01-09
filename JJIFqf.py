@@ -193,16 +193,9 @@ def get_standings(user, password):
         df['continent'].where(~(df['country_code'].str.contains("TUR")),
                                   other="Europe", inplace=True)
 
-
-
-
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_name_to_country_alpha3(x))
         df['Country'].replace("Taiwan, Province of China", "Chinese Taipei", regex=True, inplace=True)
         df['Country'].replace(",", "", regex=True, inplace=True)
-
-
-
-        df['continent'].replace("America", "Pan America", regex=True, inplace=True)
 
         list_df.append(df)
 
