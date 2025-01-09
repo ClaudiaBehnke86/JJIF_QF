@@ -1,0 +1,7 @@
+[theme]
+backgroundColor="#161616"
+secondaryBackgroundColor="#595b62"
+textColor="#f5f5f5"
+[server]
+enableXsrfProtection = false
+enableCORS = false

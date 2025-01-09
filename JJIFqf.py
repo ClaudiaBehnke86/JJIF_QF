@@ -26,6 +26,13 @@ pd.options.mode.chained_assignment = None  # default='warn'
 BASEURI = "https://www.sportdata.org/ju-jitsu/rest/"
 
 
+# some dictionaries for JJIF Colors
+COLOR_MAP_CON = {"Europe": 'rgb(243, 28, 43)',
+                 "Asia": 'rgb(0,144,206)',
+                 "Pan America": 'rgb(211,211,211)',
+                 "Africa": 'rgb(105,105,105)',
+                 "Oceania": 'rgb(255,255,255)'}
+
 class PDF(FPDF):
     '''
     overwrites the pdf settings
@@ -166,6 +173,8 @@ def get_standings(user, password):
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_name_to_country_alpha3(x))
         df['Country'].replace("Taiwan, Province of China", "Chinese Taipei", regex=True, inplace=True)
         df['Country'].replace(",", "", regex=True, inplace=True)
+
+        df['continent'].replace("America", "Pan America", regex=True, inplace=True)
 
         list_df.append(df)
 
@@ -433,7 +442,7 @@ if password == st.secrets['application_pass']:
         df_jjcu['Continent'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().index
         df_jjcu['counts'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().values
         fig2 = px.pie(df_jjcu, values='counts', names='Continent',
-                      color='Continent',
+                      color='Continent', color_discrete_map=COLOR_MAP_CON,
                       title='Continent distribution total')
         st.plotly_chart(fig2, use_container_width=True)
 
@@ -443,7 +452,7 @@ if password == st.secrets['application_pass']:
             df_jjcu_R['Continent'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().index
             df_jjcu_R['counts'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().values
             fig_R = px.pie(df_jjcu_R, values='counts', names='Continent',
-                          color='Continent',
+                          color='Continent', color_discrete_map=COLOR_MAP_CON,
                           title='Continent distribution Ranking')
             st.plotly_chart(fig_R, use_container_width=True)
 
@@ -452,7 +461,7 @@ if password == st.secrets['application_pass']:
             df_jjcu_WC['Continent'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().index
             df_jjcu_WC['counts'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().values
             fig_WC = px.pie(df_jjcu_WC, values='counts', names='Continent',
-                          color='Continent',
+                          color='Continent', color_discrete_map=COLOR_MAP_CON,
                           title='Continent distribution Wild Cards')
             st.plotly_chart(fig_WC, use_container_width=True)
 
