@@ -164,6 +164,8 @@ def get_standings(user, password):
             lambda x: pc.country_alpha2_to_country_name(x))
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_alpha2_to_country_name(x))
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_name_to_country_alpha3(x))
+        df['Country'].replace("Taiwan, Province of China", "Chinese Taipei", regex=True, inplace=True)
+        df['Country'].replace(",", "", regex=True, inplace=True)
 
         list_df.append(df)
 
@@ -317,7 +319,7 @@ if password == st.secrets['application_pass']:
     cat_list = df_standings['Category'].unique()
 
     # create tabs
-    select, categories, countries, graphics = st.tabs(["Select athletes", "Categories", "Countries", "Show Graphics"])
+    select, categories, countries, graphics = st.tabs(["Select wildcards", "Categories", "Countries","Show Graphics"])
 
     if 'dropcats' not in st.session_state:
         dropcats = []
@@ -380,8 +382,11 @@ if password == st.secrets['application_pass']:
                     mime="text/csv",
                 )
             st.write("Full categories ", str(dropcats))
+            st.header("Wild Card Athletes")
+            st.dataframe(df_standings[df_standings['QF_type']== "WC"], use_container_width=True, hide_index=True, column_order=['Category','Standing', 'Country', 'Lastname', 'Firstname', 'Points'])
+
     with graphics:
-        #some pics
+        # some pics
 
         # countries with athletes in the top 4
         df_standings_points_sel = df_standings[(df_standings['QF_type'].notnull())]
