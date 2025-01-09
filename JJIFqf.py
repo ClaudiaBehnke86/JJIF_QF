@@ -136,7 +136,7 @@ def get_standings(user, password):
         df_in = df_list[-1]
 
         # only used relevant data
-        df = df_in[['Lastname', 'Firstname', 'Country', 'Continent', 'Standing', 'Unnamed: 9_level_0']]
+        df = df_in[['Lastname', 'Firstname', 'Country', 'Standing', 'Unnamed: 9_level_0']]
         # remove weird double column
         df.drop(('Country', 'TOP 10'), axis=1, inplace=True)
         # rename
@@ -167,12 +167,40 @@ def get_standings(user, password):
 
         # convert IOC codes to ISO codes using a dict
         df['country_code'] = df['country_code'].replace(IOC_ISO)
+        # set the continent
+        df['continent'] = df['country_code'].apply(
+            lambda x: pc.country_alpha2_to_continent_code(x))
+
+        df['continent'] = df['continent'].apply(
+            lambda x: pc.convert_continent_code_to_continent_name(x))
+
         df['Country'] = df['country_code'].apply(
             lambda x: pc.country_alpha2_to_country_name(x))
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_alpha2_to_country_name(x))
+
+
+
+        # some JJIF adaptions
+        # we have a Pan American Union and not North and South Amerixa
+        df['continent'].where(~(df['continent'].str.contains("South America")),
+                                  other="Pan America", inplace=True)
+        df['continent'].where(~(df['continent'].str.contains("North America")),
+                                  other="Pan America", inplace=True)
+        # ISR is part of the European Union
+        df['continent'].where(~(df['country_code'].str.contains("ISR")),
+                                  other="Europe", inplace=True)
+        # TUR is part of the European Union
+        df['continent'].where(~(df['country_code'].str.contains("TUR")),
+                                  other="Europe", inplace=True)
+
+
+
+
         df['country_code'] = df['country_code'].apply(lambda x: pc.country_name_to_country_alpha3(x))
         df['Country'].replace("Taiwan, Province of China", "Chinese Taipei", regex=True, inplace=True)
         df['Country'].replace(",", "", regex=True, inplace=True)
+
+
 
         df['continent'].replace("America", "Pan America", regex=True, inplace=True)
 
@@ -292,7 +320,7 @@ if password == st.secrets['application_pass']:
     remove_df = df_top4[df_top4.duplicated(subset=['Category', 'country_code'], keep='first')]
 
     # update standings
-    df_standings = pd.merge(df_standings, remove_df, on=['Category', 'country_code', 'Country', 'Firstname', 'Lastname', 'Continent', 'Standing', 'Points', 'QF_type'], how='left', indicator='Double')
+    df_standings = pd.merge(df_standings, remove_df, on=['Category', 'country_code', 'Country', 'Firstname', 'Lastname', 'continent', 'Standing', 'Points', 'QF_type'], how='left', indicator='Double')
 
     # remove R at double nations
     df_standings.loc[df_standings['Double'] == "both", "QF_type"] = None
@@ -368,7 +396,7 @@ if password == st.secrets['application_pass']:
             )
             selected_athletes = output_dict.selection.rows
             filtered_df = df_selectable.iloc[selected_athletes]
-            df_standings = pd.merge(df_standings, filtered_df, on=['Category', 'country_code', 'Country', 'Firstname', 'Lastname', 'Continent', 'Standing', 'Points', 'QF_type'], how='left', indicator='Double')
+            df_standings = pd.merge(df_standings, filtered_df, on=['Category', 'country_code', 'Country', 'Firstname', 'Lastname', 'continent', 'Standing', 'Points', 'QF_type'], how='left', indicator='Double')
             # add Selection
             df_standings.loc[df_standings['Double'] == "both", "QF_type"] = "WC"
             del df_standings['Double']
@@ -439,30 +467,30 @@ if password == st.secrets['application_pass']:
         st.plotly_chart(x)
 
         df_jjcu = pd.DataFrame()
-        df_jjcu['Continent'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().index
-        df_jjcu['counts'] = df_standings['Continent'][df_standings['QF_type'].notnull()].value_counts().values
-        fig2 = px.pie(df_jjcu, values='counts', names='Continent',
-                      color='Continent', color_discrete_map=COLOR_MAP_CON,
-                      title='Continent distribution total')
+        df_jjcu['continent'] = df_standings['continent'][df_standings['QF_type'].notnull()].value_counts().index
+        df_jjcu['counts'] = df_standings['continent'][df_standings['QF_type'].notnull()].value_counts().values
+        fig2 = px.pie(df_jjcu, values='counts', names='continent',
+                      color='continent', color_discrete_map=COLOR_MAP_CON,
+                      title='continent distribution total')
         st.plotly_chart(fig2, use_container_width=True)
 
         left_column, right_column = st.columns(2)
         with left_column:
             df_jjcu_R = pd.DataFrame()
-            df_jjcu_R['Continent'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().index
-            df_jjcu_R['counts'] = df_standings['Continent'][df_standings['QF_type']== "R"].value_counts().values
-            fig_R = px.pie(df_jjcu_R, values='counts', names='Continent',
-                          color='Continent', color_discrete_map=COLOR_MAP_CON,
-                          title='Continent distribution Ranking')
+            df_jjcu_R['continent'] = df_standings['continent'][df_standings['QF_type']== "R"].value_counts().index
+            df_jjcu_R['counts'] = df_standings['continent'][df_standings['QF_type']== "R"].value_counts().values
+            fig_R = px.pie(df_jjcu_R, values='counts', names='continent',
+                          color='continent', color_discrete_map=COLOR_MAP_CON,
+                          title='continent distribution Ranking')
             st.plotly_chart(fig_R, use_container_width=True)
 
         with right_column:
             df_jjcu_WC = pd.DataFrame()
-            df_jjcu_WC['Continent'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().index
-            df_jjcu_WC['counts'] = df_standings['Continent'][df_standings['QF_type']== "WC"].value_counts().values
-            fig_WC = px.pie(df_jjcu_WC, values='counts', names='Continent',
-                          color='Continent', color_discrete_map=COLOR_MAP_CON,
-                          title='Continent distribution Wild Cards')
+            df_jjcu_WC['continent'] = df_standings['continent'][df_standings['QF_type']== "WC"].value_counts().index
+            df_jjcu_WC['counts'] = df_standings['continent'][df_standings['QF_type']== "WC"].value_counts().values
+            fig_WC = px.pie(df_jjcu_WC, values='counts', names='continent',
+                          color='continent', color_discrete_map=COLOR_MAP_CON,
+                          title='continent distribution Wild Cards')
             st.plotly_chart(fig_WC, use_container_width=True)
 
 
